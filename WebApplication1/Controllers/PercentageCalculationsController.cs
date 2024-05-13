@@ -24,11 +24,41 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet("{whatIs}/{ofWhat}")]
-        public float CalculateBasePercentage(
+        public float CalcWhatIsXpercentOfY(
             float whatIs,
             float ofWhat)
         {
             float result = whatIs / 100 * ofWhat;
+
+            return result;
+        }
+
+        // Add a get method to calculate what is X percent of Y
+        public float CalcWhatIsXpercentOfY2(
+                       float whatIs,
+                                  float ofWhat)
+        {
+            float result = whatIs / 100 * ofWhat;
+
+            return result;
+        }
+
+        [HttpGet("{whatIs}/{ofWhat}")]
+        public float CalcXisWhatPercentOfY(
+            float whatIs,
+            float ofWhat)
+        {
+            float result = whatIs / ofWhat * 100;
+
+            return result;
+        }
+
+        [HttpGet("{whatIs}/{ofWhat}")]
+        public float CalcWhatIsPercentChangeFromXtoY(
+            float whatIs,
+            float ofWhat)
+        {
+            float result = (ofWhat - whatIs) / whatIs * 100;
 
             return result;
         }
