@@ -24,33 +24,33 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet("per1")]
-        public float CalcWhatIsXpercentOfY(
+        public PercentageResultModel CalcWhatIsXpercentOfY(
             float whatIs,
             float ofWhat)
         {
             float result = whatIs / 100 * ofWhat;
 
-            return result;
+            return new PercentageResultModel() { Result = result };
         }
 
         [HttpGet("per2")]
-        public float CalcXisWhatPercentOfY(
+        public PercentageResultModel CalcXisWhatPercentOfY(
             float whatIs,
             float ofWhat)
         {
             float result = whatIs / ofWhat * 100;
 
-            return result;
+            return new PercentageResultModel() { Result = result };
         }
 
         [HttpGet("per3")]
-        public float CalcWhatIsPercentChangeFromXtoY(
+        public PercentageResultModel CalcWhatIsPercentChangeFromXtoY(
             float whatIs,
             float ofWhat)
         {
             float result = (ofWhat - whatIs) / whatIs * 100;
 
-            return result;
+            return new PercentageResultModel() { Result = result };
         }
     }
 }
