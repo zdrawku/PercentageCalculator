@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
             .ToArray();
         }
 
-        [HttpGet("per1")]
+        [HttpGet("CalcWhatIsXpercentOfY")]
         public PercentageResultModel CalcWhatIsXpercentOfY(
             float whatIs,
             float ofWhat)
@@ -33,7 +33,7 @@ namespace WebApplication1.Controllers
             return new PercentageResultModel() { Result = result };
         }
 
-        [HttpGet("per2")]
+        [HttpGet("CalcXisWhatPercentOfY")]
         public PercentageResultModel CalcXisWhatPercentOfY(
             float whatIs,
             float ofWhat)
@@ -43,7 +43,7 @@ namespace WebApplication1.Controllers
             return new PercentageResultModel() { Result = result };
         }
 
-        [HttpGet("per3")]
+        [HttpGet("CalcWhatIsPercentChangeFromXtoY")]
         public PercentageResultModel CalcWhatIsPercentChangeFromXtoY(
             float whatIs,
             float ofWhat)
