@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
             .ToArray();
         }
 
-        [HttpGet("{whatIs}/{ofWhat}")]
+        [HttpGet("per1")]
         public float CalcWhatIsXpercentOfY(
             float whatIs,
             float ofWhat)
@@ -33,17 +33,7 @@ namespace WebApplication1.Controllers
             return result;
         }
 
-        // Add a get method to calculate what is X percent of Y
-        public float CalcWhatIsXpercentOfY2(
-                       float whatIs,
-                                  float ofWhat)
-        {
-            float result = whatIs / 100 * ofWhat;
-
-            return result;
-        }
-
-        [HttpGet("{whatIs}/{ofWhat}")]
+        [HttpGet("per2")]
         public float CalcXisWhatPercentOfY(
             float whatIs,
             float ofWhat)
@@ -53,7 +43,7 @@ namespace WebApplication1.Controllers
             return result;
         }
 
-        [HttpGet("{whatIs}/{ofWhat}")]
+        [HttpGet("per3")]
         public float CalcWhatIsPercentChangeFromXtoY(
             float whatIs,
             float ofWhat)
