@@ -22,9 +22,10 @@ app.UseCors(MyAllowSpecificOrigins);
 
 app.UseSwagger();
 // Configure the HTTP request pipeline.
+app.UseSwaggerUI();
+
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

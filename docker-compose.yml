@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  percentagecalculator:
+    image: ${DOCKER_REGISTRY-}percentagecalculator
+    build:
+      context: .
+      dockerfile: WebApplication1\Dockerfile
